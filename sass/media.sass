@@ -1,0 +1,84 @@
+@import 'responsive'
+
+.media
+	padding-top: 22px
+	+media(lgsm)	
+		padding-top: 0px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+		+media(sm)
+			margin: 0px
+
+	&__item
+		width: calc(100% / 3 - 40px)
+		box-shadow: 0 10px 30px rgba(131, 131, 131, 0.2)
+		margin: 0 20px
+		margin-bottom: 40px
+		+media(md)
+			width: calc(100% / 2 - 40px)
+		+media(sm)
+			width: 100%
+			max-width: 500px
+			margin: 0 auto
+			margin-bottom: 40px
+
+		&:hover 
+			.media__details
+				color: #808080
+
+			.media__dots
+				fill: #808080
+
+
+	&__image
+		padding-top: 45%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: top center
+
+	&__text
+		padding: 32px 35px
+		+media(mdx)
+			padding: 30px 20px
+
+	&__title
+		font-size: 16px
+		line-height: 1.9
+		color: #333
+		padding-bottom: 18px
+		font-weight: bold
+		+media(sm)
+			line-height: 1.6
+
+	&__desc
+		padding-bottom: 25px
+		p
+			font-size: 14px
+			line-height: 2.1
+			color: #333333
+			+media(sm)
+				line-height: 1.9
+
+	&__btn
+		cursor: pointer
+		display: flex
+		align-items: center
+		background-color: #fff
+		border: none
+		outline: none
+
+	&__details
+		display: block
+		font-size: 16px
+		color: #13491e
+		padding-right: 14px
+		font-weight: bold
+		transition: 0.3s color
+
+	&__dots
+		display: block
+		fill: #13491e
+		transition: 0.3s fill

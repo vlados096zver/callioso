@@ -1,0 +1,80 @@
+@import 'responsive'
+
+.map
+	&__wrap
+		position: relative
+		max-width: 780px
+		margin: 0 auto
+		margin-top: 5px
+		margin-bottom: 40px
+
+	&__holder
+		img
+			display: block
+
+	&__col
+		position: absolute
+		font-size: 18px
+		text-transform: uppercase
+		font-weight: bold
+		+media(smdx)
+			font-size: 17px
+		+media(sm)
+			font-size: 15px
+		+media(smx)
+			font-size: 14px
+		+media(xs)
+			font-size: 13px
+		+media(xxs)
+			font-size: 11px
+		+media(mini)
+			font-size: 10px
+
+		span
+			display: block
+			padding-top: 5px
+			font-weight: normal
+
+		&:first-child
+			top: 5px
+			left: 15%
+			+media(sm)
+				left: 18%
+			+media(smx)
+				left: 16%
+			+media(xs)
+				left: 11%
+			+media(xxs)
+				left: 9%
+			+media(mini)
+				left: 4%
+			span
+				text-align: right
+
+		&:nth-child(2)
+			top: 5px
+			right: 10px
+			+media(smdx)
+				right: 5px
+			+media(sm)
+				top: -50px
+			+media(xxs)
+				top: -40px
+			+media(mini)
+				right: 0px
+
+		&:nth-child(3)
+			top: 80px	
+			right: 9%
+			+media(smdx)
+				right: 8%
+			+media(sm)
+				right: 2%
+			+media(smx)
+				top: 60px
+				right: 0%
+			+media(xs)
+				top: 35px
+				right: -2%
+			+media(xxs)
+				top: 22px

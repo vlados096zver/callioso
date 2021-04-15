@@ -1,0 +1,122 @@
+@import 'responsive'
+
+.about
+	&__text
+		margin-top: -15px
+		margin-bottom: 10px
+		+media(lgsm)
+			margin-top: 0px
+		p
+			font-size: 16px
+			line-height: 1.9
+			color: #333333
+			padding-bottom: 2em
+			+media(md)
+				line-height: 1.7
+
+		h1
+			font-size: 28px
+			+media(sm)
+				font-size: 26px
+
+		h2
+			font-size: 26px
+			+media(sm)
+				font-size: 24px
+
+		h3
+			font-size: 24px
+			+media(sm)
+				font-size: 22px
+
+		h4
+			font-size: 22px
+			+media(sm)
+				font-size: 20px
+
+		h5
+			font-size: 20px
+			+media(sm)
+				font-size: 18px
+
+		h6
+			font-size: 18px
+			+media(sm)
+				font-size: 16px
+
+		h1, h2, h3, h4, h5, h6
+			line-height: 1.5
+			color: #000
+			font-weight: bold
+			padding-bottom: 50px
+			+media(sm)
+				line-height: 1.4
+				padding-bottom: 35px
+
+		ul
+			margin: 0px
+			margin-bottom: 2em
+			li
+				list-style-type: disc
+				list-style-position: inside
+				line-height: 1.7
+				margin-bottom: 5px
+				padding-left: 20px
+
+		ol
+			padding: 0px
+			margin: 0px
+			margin-bottom: 2em
+			li
+				list-style-type: decimal
+				list-style-position: inside
+				line-height: 1.7
+				margin-bottom: 5px
+				padding-left: 20px
+
+	&__image
+		img
+			display: block
+
+	&--page
+		margin-top: -65px
+		+media(lgsm)	
+			margin-top: 0px
+
+		.about__text
+			margin-top: 0px
+
+	&--hemp
+		.alignright,
+		.alignleft
+			max-width: 430px
+
+	&--elevator
+		.alignright,
+		.alignleft
+			max-width: 390px
+
+
+.alignright
+	float: right
+	margin-left: 40px
+
+.alignleft
+	float: left
+	margin-right: 40px
+
+.alignright,
+.alignleft
+	max-width: 580px
+	margin-bottom: 25px
+	+media(mdx)
+		max-width: 480px
+	+media(md)
+		max-width: 400px
+	+media(sm)
+		float: none
+		margin: 0 auto
+		margin-bottom: 30px
+	img
+		display: block
+

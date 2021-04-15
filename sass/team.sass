@@ -1,0 +1,67 @@
+@import 'responsive'
+
+.team
+	margin-top: -65px
+	+media(lgsm)	
+		margin-top: 0px
+
+	&__wrap	
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+		padding-top: 34px
+		+media(sm)
+			margin: 0px
+			padding-top: 20px
+
+	&__item
+		width: calc(100% / 3 - 40px)
+		box-shadow: 0 10px 30px rgba(131, 131, 131, 0.2)
+		padding-bottom: 30px
+		margin: 0 20px
+		margin-bottom: 42px
+		+media(mdx)
+			width: calc(100% / 2 - 40px)
+		+media(sm)
+			width: 100%
+			max-width: 500px
+			margin: 0 auto
+			margin-bottom: 42px
+
+	&__image
+		background-repeat: no-repeat
+		background-size: cover
+		padding-top: 76%
+		margin-top: 10px
+		margin-bottom: 40px
+		+media(mdx)
+			padding-top: 69%
+		+media(sm)
+			margin-bottom: 20px
+		&--no
+			background-image: url(../img/no-pic.png)
+			background-repeat: no-repeat
+			background-size: 70px 70px
+			background-position: center
+			min-height: 215px
+			border: 2px solid #cdcdcd
+			padding-top: 0px
+			margin: 0 35px
+			margin-top: 28px
+			margin-bottom: 56px
+
+	&__content
+		padding: 0 35px
+
+	&__fio
+		font-size: 18px
+		color: #13491e
+		text-transform: uppercase
+		margin-bottom: 8px
+		font-weight: bold
+
+	&__position
+		font-size: 16px
+		color: #333
+		text-transform: uppercase
+		font-weight: bold

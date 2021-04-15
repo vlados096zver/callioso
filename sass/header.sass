@@ -1,0 +1,152 @@
+@import 'responsive'
+
+.main-header
+	padding-top: 40px
+	+media(lgsm)
+		margin-bottom: 25px
+	&__block
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		margin-bottom: 90px
+
+	&__btn
+		position: relative
+		cursor: pointer
+		display: block
+		width: 40px
+		height: 30px
+		margin-left: 35px
+		margin-top: -2px
+
+	&__burger
+		display: block
+		position: absolute
+		top: 50%
+		left: 0
+		width: 40px
+		height: 3px
+		background-color: #13491e
+		transition: 0.5s width
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			width: 40px
+			height: 3px
+			background-color: #13491e
+			left: 0
+			transition: 0.5s
+
+		&:after
+			top: calc(100% + 10px)
+
+		&:before
+			bottom: calc(100% + 10px)
+
+	&__image
+		max-width: 200px
+		margin: 0 auto
+		margin-bottom: 36px
+		+media(md)
+			max-width: 150px
+		img
+			display: block
+			width: 100%
+			
+	&__text
+		max-width: 790px
+		margin: 0 auto
+		margin-bottom: 65px
+		p
+			font-size: 18px
+			line-height: 1.7
+			color: #13491e
+			text-align: center
+			text-transform: uppercase
+			font-weight: bold
+			+media(md)
+				font-size: 17px
+				line-height: 1.5
+			+media(sm)
+				font-size: 16px
+
+	&__pic
+		img
+			display: block
+
+.header
+	&__wrap
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		padding-top: 40px
+		+media(smx)
+			flex-direction: column
+			align-items: center
+
+	&__col
+		display: flex
+		+media(smx)
+			order: 2
+			flex-direction: column
+			margin-top: 25px
+			display: contents
+
+	&__image
+		display: block
+		max-width: 105px
+		width: 100%
+		margin-right: 30px
+		+media(smx)
+			margin: 0 auto
+			margin-bottom: 30px
+		img
+			display: block
+
+	&__elem
+		+media(smx)
+			display: contents
+
+	&__block
+		display: flex
+		align-items: center
+		+media(smx)
+			margin-bottom: 25px
+
+.header
+	+media(lgsm)
+		margin-bottom: 25px
+	+media(smx)
+		margin-bottom: 5px
+
+.language-chooser
+	display: flex
+	align-items: center
+	margin-left: 30px
+	li
+		font-size: 18px
+		line-height: 1.2
+		padding: 0px 10px
+		text-transform: uppercase
+		&:not(:last-child)
+			position: relative
+			&:after
+				position: absolute
+				content: '|'
+				color: #333333
+				top: 0px
+				right: 0px
+		&:first-child
+			padding-left: 0px
+		&:last-child
+			padding-right: 0px
+		a
+			color: #333
+			&:hover
+				text-decoration: underline
+				
+		&.active a
+			font-weight: 700
+			&:hover
+				text-decoration: none
