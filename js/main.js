@@ -1,15 +1,24 @@
 $(document).ready(function() {
 
   $('body').on('click', function(e) {
-    if ($(e.target).is('.popup__menu, .popup__desc')) {
+    if ($(e.target).is('.popup__menu, .popup__desc, .popup--data, .popup__close')) {
       $('.popup__menu').removeClass('popup--active');
       $('.popup__block').removeClass('popup__block--active');
+      $('.popup--data').removeClass('popup--active');
     }
   });
 
   $('.main-header__btn').on('click', function() {
     $('.popup__menu').addClass('popup--active');
     $('.popup__block').addClass('popup__block--active');
+  });
+
+   $('.block__item').on('click', function(event) {
+    const block = event.target.closest('.block__item');
+    if(!block) return false;
+    let elem = $(this).data('popup');
+    $(`.${elem}`).addClass('popup--active');
+
   });
 
     function validate(input, length, regExp, error, phone) {

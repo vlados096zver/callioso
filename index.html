@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="js/chart.min.js"></script>
-    <script src="js/utils.js"></script>
+    <!--<script src="js/utils.js"></script>-->
 </head>
 
 <body>
@@ -58,38 +58,38 @@
 	</div>
 	<div class="container">
 		<div class="block__wrap">
-			<button class="block__item">
+			<button class="block__item" data-popup="popup--corn">
 				<div class="block__image">
 					<img src="img/corn.png" alt="">
 				</div>
 				<p class="block__elem">Кукурудза</p>
 			</button>
-			<button class="block__item">
+			<button class="block__item" data-popup="popup--sunflower">
 				<div class="block__image">
 					<img src="img/sunflower.png" alt="">
 				</div>
 				<p class="block__elem">Соняшник</p>
 			</button>
-			<button class="block__item">
+			<button class="block__item" data-popup="popup--wheat">
 				<div class="block__image">
 					<img src="img/wheat.png" alt="">
 				</div>
 				<p class="block__elem">Пшениця</p>
 			</button>
 
-			<button class="block__item">
+			<button class="block__item" data-popup="popup--soy">
 				<div class="block__image">
 					<img src="img/soy.png" alt="">
 				</div>
 				<p class="block__elem">Соя</p>
 			</button>
-            <button class="block__item">
+            <button class="block__item" data-popup="popup--rapeseed">
 				<div class="block__image">
 					<img src="img/rapeseed.png" alt="">
 				</div>
 				<p class="block__elem">Ріпак</p>
 			</button>
-			<button class="block__item">
+			<button class="block__item" data-popup="popup--hemp-pic">
 				<div class="block__image">
 					<img src="img/hemp-pic.png" alt="">
 				</div>
@@ -130,7 +130,7 @@
 			<li>
 				<a class="popup__link" href="">Напрями діяльності</a>
 				<ul class="popup__submenu">
-					<li><a href="" class="popup__box">	Сільске господарство</a></li>
+					<li><a href="" class="popup__box">Сільске господарство</a></li>
 					<li><a href="" class="popup__box">Технічна конопля</a></li>
 					<li><a href="" class="popup__box">Елеватор</a></li>
 					<li><a href="" class="popup__box">Відновлювальна енергетика</a></li>
@@ -141,6 +141,188 @@
 			<li><a href="" class="popup__link">Медіа про нас</a></li>
 			<li><a href="" class="popup__link">Контакти</a></li>
 		</ul>
+	</div>
+</div>
+
+<div class="popup popup--data popup--corn">
+	<div class="inner-overlay inner-text">
+		<div class="popup__close"></div>
+		<h3 class="popup__title">Врожай</h3>
+		<h4 class="popup__subtitle">Кукурудза</h4>
+		<canvas id="corn"></canvas>
+
+	     <script>
+	            
+	      	var ctx = document.getElementById("corn").getContext('2d');
+	      	var color = Chart.helpers.color;
+			var barChart = new Chart(ctx, {
+			  type: 'bar',
+			  data: {
+			    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "November"],
+			    datasets: [{
+			      label: 'data-1',
+			      data: [60, 55],
+			      backgroundColor: '#a6da8a'
+			    }, {
+			      label: 'data-2',
+			      data: [45, 12],
+			      backgroundColor: '#b3b3b3'
+			    }]
+			  }
+			});
+
+         </script>
+	</div>
+</div>
+
+<div class="popup popup--data popup--sunflower">
+	<div class="inner-overlay inner-text">
+		<div class="popup__close"></div>
+		<h3 class="popup__title">Врожай</h3>
+		<h4 class="popup__subtitle">Соняшник</h4>
+		<canvas id="sunflower"></canvas>
+		<script>
+	            
+	      	var ctx = document.getElementById("sunflower").getContext('2d');
+	      	var color = Chart.helpers.color;
+			var barChart = new Chart(ctx, {
+			  type: 'bar',
+			  data: {
+			     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "November"],
+			    datasets: [{
+			      label: 'data-1',
+			      data: [160, 65],
+			      backgroundColor: '#a6da8a'
+			    }, {
+			      label: 'data-2',
+			      data: [1135, 42],
+			      backgroundColor: '#b3b3b3'
+			    }]
+			  }
+			});
+
+         </script>
+	</div>
+</div>
+
+<div class="popup popup--data popup--wheat">
+	<div class="inner-overlay inner-text">
+		<div class="popup__close"></div>
+		<h3 class="popup__title">Врожай</h3>
+		<h4 class="popup__subtitle">Пшениця</h4>
+		<canvas id="wheat"></canvas>
+		<script>
+	            
+	      	var ctx = document.getElementById("wheat").getContext('2d');
+	      	var color = Chart.helpers.color;
+			var barChart = new Chart(ctx, {
+			  type: 'bar',
+			  data: {
+			     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "November"],
+			    datasets: [{
+			      label: 'data-1',
+			      data: [160, 65],
+			      backgroundColor: '#a6da8a'
+			    }, {
+			      label: 'data-2',
+			      data: [1135, 42],
+			      backgroundColor: '#b3b3b3'
+			    }]
+			  }
+			});
+
+         </script>
+	</div>
+</div>
+
+
+<div class="popup popup--data popup--soy">
+	<div class="inner-overlay inner-text">
+		<div class="popup__close"></div>
+		<h3 class="popup__title">Врожай</h3>
+		<h4 class="popup__subtitle">Соя</h4>
+		<canvas id="soy"></canvas>
+		<script>
+	            
+	      	var ctx = document.getElementById("soy").getContext('2d');
+	      	var color = Chart.helpers.color;
+			var barChart = new Chart(ctx, {
+			  type: 'bar',
+			  data: {
+			     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "November"],
+			    datasets: [{
+			      label: 'data-1',
+			      data: [160, 65],
+			      backgroundColor: '#a6da8a'
+			    }, {
+			      label: 'data-2',
+			      data: [1135, 42],
+			      backgroundColor: '#b3b3b3'
+			    }]
+			  }
+			});
+
+         </script>
+	</div>
+</div>
+
+<div class="popup popup--data popup--rapeseed">
+	<div class="inner-overlay inner-text">
+		<div class="popup__close"></div>
+		<h3 class="popup__title">Врожай</h3>
+		<h4 class="popup__subtitle">Ріпак</h4>
+		<canvas id="rapeseed"></canvas>
+		<script>
+	            
+	      	var ctx = document.getElementById("rapeseed").getContext('2d');
+	      	var color = Chart.helpers.color;
+			var barChart = new Chart(ctx, {
+			  type: 'bar',
+			  data: {
+			     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "November"],
+			    datasets: [{
+			      label: 'data-1',
+			      data: [160, 65],
+			      backgroundColor: '#a6da8a'
+			    }, {
+			      label: 'data-2',
+			      data: [1135, 42],
+			      backgroundColor: '#b3b3b3'
+			    }]
+			  }
+			});
+
+         </script>
+	</div>
+</div>
+
+<div class="popup popup--data popup--hemp-pic">
+	<div class="inner-overlay inner-text">
+		<div class="popup__close"></div>
+		<h3 class="popup__title">Врожай</h3>
+		<h4 class="popup__subtitle">Конопля</h4>
+		<canvas id="hemp-pic"></canvas>
+		<script>
+	            
+	      	var ctx = document.getElementById("hemp-pic").getContext('2d');
+	      	var color = Chart.helpers.color;
+			var barChart = new Chart(ctx, {
+			  type: 'bar',
+			  data: {
+			     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "November"],
+			    datasets: [{
+			      label: 'data-1',
+			      data: [160, 65],
+			      backgroundColor: '#a6da8a'
+			    }, {
+			      label: 'data-2',
+			      data: [1135, 42],
+			      backgroundColor: '#b3b3b3'
+			    }]
+			  }
+			});
+
+         </script>
 	</div>
 </div>
 
