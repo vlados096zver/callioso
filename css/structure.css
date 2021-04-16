@@ -1,0 +1,139 @@
+.structure {
+	margin-top: 45px;
+	padding-bottom: 20px;
+}
+
+.structure__title {
+	max-width: 270px;
+	border-radius: 5px;
+	border: 3px solid #13491e;
+	background-color: #e0f3d6;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 11px 5px;
+	margin: 0 auto;
+	margin-bottom: 38px;
+	font-weight: bold;
+}
+
+.structure__wrap {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	border-top: 3px solid #13491e;
+	padding-top: 38px;
+	margin: 0 -20px;
+}
+
+.structure__wrap:after {
+	position: absolute;
+	z-index: 3;
+	content: ' ';
+	top: -42px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 3px;
+	height: 40px;
+	background-color: #13491e;
+	z-index: 2;
+}
+
+.structure__item {
+	width: calc(100% / 4 - 40px);
+	margin: 0 20px;
+}
+
+.structure__item h4 {
+	position: relative;
+	font-size: 14px;
+	line-height: 1.2;
+	border-radius: 5px;
+	border: 3px solid #13491e;
+	background-color: #e0f3d6;
+	text-align: center;
+	padding: 14px 15px;
+	font-weight: bold;
+}
+
+.structure__item h4:after {
+	position: absolute;
+	z-index: 2;
+	content: ' ';
+	top: -41px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 3px;
+	height: 38px;
+	background-color: #edb450;
+}
+
+.structure__item ul {
+	position: relative;
+	z-index: 3;
+	padding-top: 25px;
+}
+
+.structure__item ul:after {
+	position: absolute;
+	content: ' ';
+	top: -2px;
+	left: 0px;
+	width: 3px;
+	height: calc(100% + 2px);
+	background-color: #13491e;
+}
+
+.structure__item ul li {
+	position: relative;
+	font-size: 14px;
+	line-height: 1.2;
+	border: 3px solid #edb450;
+	color: #4a2f00;
+	background-color: #fcf6cc;
+	text-align: center;
+	padding: 15px 20px;
+	margin-left: 32px;
+	margin-bottom: 25px;
+	font-weight: bold;
+}
+
+.structure__item ul li:after {
+	position: absolute;
+	content: ' ';
+	left: -32px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 32px;
+	height: 3px;
+	background-color: #edb450;
+}
+
+@media screen and (max-width: 1050px) {
+
+.structure {
+	margin-top: 10px;
+}
+
+.structure__wrap {
+	margin: 0px auto;
+	max-width: 500px;
+	border: none;
+	padding-top: 0px;
+}
+
+.structure__wrap:after {
+	display: none;
+}
+
+.structure__item {
+	width: 100%;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.structure__item h4:after {
+	display: none;
+}
+
+}
+
