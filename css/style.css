@@ -1870,6 +1870,7 @@ img {
 	line-height: 1.2;
 	color: #333333;
 	border: none;
+	text-transform: uppercase;
 	padding-right: 40px;
 }
 
