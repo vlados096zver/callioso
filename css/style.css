@@ -1744,6 +1744,11 @@ img {
 
 }
 
+
+.elevator__elem {
+	max-width: calc(100% - 430px);
+}
+
 .elevator__wrap {
 	display: flex;
 	justify-content: center;
@@ -1754,7 +1759,7 @@ img {
 }
 
 .elevator__item {
-	width: calc(100% / 3 - 30px);
+	width: calc(100% / 2 - 30px);
 	margin: 0 15px;
 	margin-bottom: 40px;
 }
@@ -1950,6 +1955,11 @@ img {
 }
 
 @media screen and (max-width: 960px) { 
+
+	.elevator__elem {
+		max-width: 100%;
+	}
+	
 	.elevator__wrap {
 		margin: 0px;
 	}
