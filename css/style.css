@@ -28,6 +28,12 @@
 	outline: none;
 }
 
+.clearfix::after { 
+    content: '';
+    clear: both; 
+    display: block;
+}
+
 body,
 div,
 dl,
@@ -143,6 +149,11 @@ main {
 	display: block;
 }
 
+.page__viewport {
+	min-height: 100vh;
+	overflow: hidden;
+}
+
 .main-header {
 	padding-top: 40px;
 }
@@ -187,11 +198,11 @@ main {
 }
 
 .main-header__burger:after {
-	top: calc(100% + 10px);
+	top: 10px;
 }
 
 .main-header__burger:before {
-	bottom: calc(100% + 10px);
+	bottom: 10px;
 }
 
 .main-header__image {
@@ -796,6 +807,15 @@ img {
 	margin-bottom: 10px;
 }
 
+.about__text a {
+	color: #13491e;
+	text-decoration: underline;
+}
+
+.about__text a:hover {
+	color: #73c24f;
+}
+
 .about__text p {
 	font-size: 16px;
 	line-height: 1.9;
@@ -870,7 +890,17 @@ img {
 	display: block;
 }
 
+.about__img img {
+	display: block;
+    max-height: 400px;
+    margin-bottom: 30px;
+}
+
 .about--page {
+	margin-top: -45px;
+}
+
+.about--elevator {
 	margin-top: -65px;
 }
 
@@ -931,13 +961,14 @@ img {
 .team__image {
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	padding-top: 76%;
 	margin-top: 10px;
 	margin-bottom: 40px;
 }
 
 .team__image--no {
-	background-image: url(../img/no-pic.png);
+	background-image: url(img/no-pic.png);
 	background-repeat: no-repeat;
 	background-size: 70px 70px;
 	background-position: center;
@@ -979,6 +1010,8 @@ img {
 }
 
 .media__item {
+    display: flex;
+    flex-direction: column;
 	width: calc(100% / 3 - 40px);
 	box-shadow: 0 10px 30px rgba(131, 131, 131, 0.2);
 	margin: 0 20px;
@@ -1000,7 +1033,20 @@ img {
 	background-position: top center;
 }
 
+.media__image--no {
+	background-image: url(img/no-pic.png);
+	background-repeat: no-repeat;
+	background-size: 70px 70px;
+	background-position: center;
+	border: 2px solid #cdcdcd;
+    margin: 10px 10px 0;
+    padding-top: calc(45% - 20px);
+}
+
 .media__text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 	padding: 32px 35px;
 }
 
@@ -1029,6 +1075,7 @@ img {
 	background-color: #fff;
 	border: none;
 	outline: none;
+    margin-top: auto;
 }
 
 .media__details {
@@ -1213,8 +1260,18 @@ img {
 	margin-bottom: 40px;
 }
 
+.map__subtitle {
+	width: 100%;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
 .map__holder img {
 	display: block;
+    max-width: 710px;
+    width: 100%;
 }
 
 .map__col {
@@ -1222,6 +1279,7 @@ img {
 	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: bold;
+    color: #13491e;
 }
 
 .map__col span {
@@ -1649,6 +1707,14 @@ img {
 .map__col:nth-child(3) {
 	top: 22px;
 }
+	
+.alignright,
+.alignleft {
+	display: block;
+	float: none;
+	margin: 0 auto 20px;
+	max-width: 300px;
+}
 
 }
 
@@ -1678,3 +1744,333 @@ img {
 
 }
 
+.elevator__wrap {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+
+.elevator__item {
+	width: calc(100% / 3 - 30px);
+	margin: 0 15px;
+	margin-bottom: 40px;
+}
+
+.elevator__image {
+	width: 84px;
+	height: 84px;
+	margin: 0 auto;
+	margin-bottom: 35px;
+}
+
+.elevator__title {
+	font-size: 18px;
+	line-height: 1.2;
+	color: #13491E;
+	text-align: center;
+}
+
+.services__block {
+	padding-top: 5px;
+	overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.services__block table {
+	width: 100%;
+	border-top: 2px solid #D0D0D0;
+}
+
+.services__block table th,
+.services__block table td {
+	padding: 15px 20px;
+}
+
+.services__box th {
+	width: 50%;
+	font-size: 16px;
+	line-height: 1.5;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.services__box th {
+	font-size: 18px;
+}
+
+.services__box thead th:last-child,
+.services__box tbody td:last-child {
+	text-align: right;
+}
+
+.services__box tr {
+	border-bottom: 2px solid #D0D0D0;
+}
+
+.purchase__holder {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 4px solid #f2f2f2;
+	margin-top: 2px;
+	margin-bottom: 36px;
+}
+
+.purchase__wrap {
+	display: flex;
+}
+
+.purchase__item {
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	font-size: 18px;
+	line-height: 1.2;
+	color: #13491E;
+	padding-bottom: 22px;
+}
+
+.purchase__item--active:after {
+	position: absolute;
+	content: ' ';
+	left: 0px;
+	bottom: -3px;
+	width: 100%;
+	height: 4px;
+	background-color: #13491E;
+}
+
+.purchase__item:not(:last-child) {
+	margin-right: 48px;
+}
+
+.purchase__data {
+	display: flex;
+	align-items: center;
+	padding-bottom: 22px
+}
+
+.purchase__change {
+	user-select: none;
+	font-size: 18px;
+	line-height: 1.2;
+	color: #333333;
+	padding-right: 38px;
+}
+
+.purchase__time {
+	user-select: none;
+	background-repeat: no-repeat;
+	background-position: right 2px center;
+	background-size: 20px;
+	font-size: 18px;
+	line-height: 1.2;
+	color: #333333;
+	border: none;
+	padding-right: 40px;
+}
+
+.purchase__row {
+	border-bottom: 2px solid #f2f2f2;
+	margin-bottom: 40px;
+}
+
+.purchase__col {
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid #f2f2f2;
+	border-bottom: none;
+	padding: 33px 35px;
+	padding-bottom: 25px;
+}
+
+.purchase__col h4 {
+	font-size: 18px;
+	line-height: 1.2;
+	color: #13491E;
+	padding-bottom: 20px;
+}
+
+.purchase__desc p {
+	font-size: 18px;
+	line-height: 1.2;
+	color: #808080;
+	padding-bottom: 15px;
+}
+
+.purchase__col ul li {
+	margin-bottom: 5px;
+}
+
+.purchase__elem { 
+	display: flex;
+	flex-direction: column;
+}
+
+.purchase__elem:first-child {
+	padding-right: 40px;
+}
+
+.purchase__price {
+	font-size: 18px;
+	line-height: 1.2;
+	color: #13491E;
+	text-align: right;
+	padding-bottom: 20px;
+	font-weight: bold;
+}
+
+.purchase__info {
+	font-size: 14px;
+	line-height: 1.2;
+	color: #808080;
+	text-align: right;
+	padding-bottom: 20px;
+}
+
+.purchase__link {
+	display: block;
+	width: max-content;
+	font-size: 18px;
+	line-height: 1.2;
+	color: #13491E;
+	text-transform: uppercase;
+	margin-left: auto;
+	margin-top: auto;
+	font-weight: bold;
+	transition: 0.3s color;
+}
+
+.purchase__link:hover {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 960px) { 
+	.elevator__wrap {
+		margin: 0px;
+	}
+
+	.elevator__item  {
+		width: 100%;
+		margin: 0px;
+		margin-bottom: 40px;
+	}
+
+	.purchase__item {
+		font-size: 17px;
+	}
+
+	.purchase__col {
+		flex-direction: column;
+		padding: 25px 20px;
+	}
+
+	.purchase__price {
+		text-align: left;
+		padding-top: 15px;
+	}
+
+	.purchase__info {
+		text-align: left;
+	}
+
+	.purchase__link {
+		margin-left: initial;
+	}
+
+	.purchase__holder {
+		align-items: flex-start;
+		flex-direction: column-reverse;
+	}
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	background-color: #efefef;
+	color: #000;
+	border-color: #c5c5c5;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	background-color: #54dc82;
+	color: #fff;
+}
+	
+ .ui-widget-header .ui-state-active {
+	color: #fff;
+}
+
+#ui-datepicker-div .ui-state-active {
+	background-color: #000;
+	color: #fff;
+}
+
+.ui-widget-content {
+	background-color: #fff;
+}
+
+.ui-widget.ui-widget-content {
+	border: none;
+}
+	
+.ui-datepicker .ui-datepicker-title {
+	color: #fff;
+}
+
+.ui-widget-header{
+	background: #54dc82;
+	border-radius: 0px;
+}
+	
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+}
+	
+	
+.ui-datepicker .ui-datepicker-next span {
+	border-left: 7px solid #fff;
+	left: calc(50% + 4px);
+}
+	
+	
+.ui-datepicker .ui-datepicker-prev span {
+	border-right: 7px solid #fff;
+	left: calc(50% - 4px);
+}
+	
+.ui-datepicker {
+	border-radius: 0px;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+	top: 3px;
+}
+	
+.ui-datepicker .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-next:hover {
+	background-color: #333;
+	border-color: #333;
+	border: none;
+}
+
+ .ui-datepicker .ui-datepicker-next-hover {
+	top: 3px;
+	right: 2px;
+}
+
+ .ui-datepicker .ui-datepicker-prev-hover {
+ 	top: 3px;
+	left: 2px;
+ }
+
+
+#ui-datepicker-div {
+	margin-top: 40px;
+}

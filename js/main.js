@@ -8,6 +8,38 @@ $(document).ready(function() {
     }
   });
 
+  $(".purchase__item").click(function() {
+    $(".purchase__item").removeClass("purchase__item--active").eq($(this).index()).addClass("purchase__item--active");
+    var index = $(this).index();
+    $(".purchase__row").hide().eq(index).fadeIn()
+  });
+
+$(function () {
+    var $myDate = $('#purchase__date');
+    var dateInput = $('#myDate');
+    var dateP = $('#myDate2');
+    
+    dateInput.datepicker({
+        dateFormat: 'd M yy',
+        monthNames: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень' ],
+        monthNamesShort: ['січня', 'лютого', 'березня', 'квітня', 'травня', 'червня', 'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'],
+        dayNames: ['неділя', 'понеділок', 'вторник', 'середа', 'четвер', 'пятниця', 'субота'],
+        dayNamesShort: ['нд', 'пнд', 'втр', 'срд', 'чт', 'птн', 'сбт'],
+        dayNamesMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+        onClose: function (dateText, inst) {
+          $(this).datepicker('option', 'dateFormat', 'd M yy');
+        },
+        onSelect: function (date, datepicker) {
+          dateP.text(date);
+        }
+    });
+
+     dateP.click(function() {
+      dateInput.datepicker("show");
+      dateP.trigger('input');
+    })
+ });
+
   $('.main-header__btn').on('click', function() {
     $('.popup__menu').addClass('popup--active');
     $('.popup__block').addClass('popup__block--active');
